@@ -8,6 +8,7 @@ public class UserDTO implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
+	private String id;
 	private String nome;
 	private String email;
 	
@@ -16,6 +17,7 @@ public class UserDTO implements Serializable{
 	public UserDTO(User obj) {
 		this.nome = obj.getName();
 		this.email = obj.getEmail();
+		this.id = obj.getId();
 	}
 
 	public String getNome() {
@@ -32,6 +34,14 @@ public class UserDTO implements Serializable{
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 	
 	
